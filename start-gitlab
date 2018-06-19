@@ -1,0 +1,12 @@
+docker run \
+    --hostname gitlab.local \
+    --rm \
+    --publish 80:80 \
+    --name gitlab \
+    --volume $HOME/install/gitlab/config:/etc/gitlab \
+    --volume $HOME/install/gitlab/logs:/var/log/gitlab \
+    --volume $HOME/install/gitlab/data:/var/opt/gitlab \
+    --volume $HOME/install/gitlab/plugins:/var/opt/gitlab-plugins \
+    --volume $HOME/install/gitlab/write-crap-here:/tempydoober/tmp \
+gitlab/gitlab-emma
+
