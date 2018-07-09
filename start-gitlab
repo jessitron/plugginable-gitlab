@@ -1,7 +1,9 @@
 docker run \
     --hostname gitlab.local \
     --rm \
+    --publish 8029:8029 \
     --publish 80:80 \
+    --env GITLAB_OMNIBUS_CONFIG="external_url 'http://localhost:8029'" \
     --name gitlab \
     --volume $HOME/install/gitlab/config:/etc/gitlab \
     --volume $HOME/install/gitlab/logs:/var/log/gitlab \

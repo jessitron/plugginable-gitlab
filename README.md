@@ -3,7 +3,7 @@ docker build this:
 
 run it with `./start-gitlab`
 
-This is still running on port 80.
+access GitLab at http://localhost:8029
 
 This crucial bit is, the plugin directory is on my local drive so I can mess with it.
 
