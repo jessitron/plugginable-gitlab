@@ -1,7 +1,7 @@
 docker run \
     --rm \
     --publish 8029:8029 \
-    --env GITLAB_OMNIBUS_CONFIG="external_url 'http://localhost:8029'; gitlab_rails['smtp_enable'] = true; gitlab_rails['smtp_address'] = 'localhost'; gitlab_rails['smtp_port'] = 25; gitlab_rails['smtp_domain'] = 'localhost'; gitlab_rails['smtp_tls'] = false; gitlab_rails['smtp_openssl_verify_mode'] = 'none'; gitlab_rails['smtp_enable_starttls_auto'] = false; gitlab_rails['smtp_ssl'] = false; gitlab_rails['smtp_force_ssl'] = false" \
+    --env GITLAB_OMNIBUS_CONFIG="external_url 'http://localhost:8029'; gitlab_rails['gitlab_email_enabled'] = true; gitlab_rails['gitlab_email_from'] = 'gitlab@jessitron.com'; gitlab_rails['gitlab_email_display_name'] = 'GitLabitron'; gitlab_rails['gitlab_email_reply_to'] = 'jessitron@gmail.com'; gitlab_rails['gitlab_email_subject_suffix'] = 'what does this do'" \
     --name gitlab \
     --volume $HOME/install/gitlab/config:/etc/gitlab \
     --volume $HOME/install/gitlab/logs:/var/log/gitlab \
